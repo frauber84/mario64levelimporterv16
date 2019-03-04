@@ -1,0 +1,11 @@
+; CreateStar (x,y,z) wrapper. A0 is a pointer to a float triplet of x,y,z coordinates.
+
+ADDIU     $sp,$sp,FFE8
+SW        $ra,0014($sp)
+LWC1      F12,0000($a0)
+LWC1      F14,0004($a0)
+JAL       802F2B88
+LW        $a2,0008($a0)
+LW        $ra,0014($sp)
+JR        $ra
+ADDIU     $sp,$sp,0018

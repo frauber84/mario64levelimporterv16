@@ -1,0 +1,21 @@
+0x80402000 - 0x80500000: Copied from ROM 0x1202000 - 0x1300000
+
+0x80402000: Modified Level Script Command 0x17 with static memory allocation
+0x80402700: CreateStar(x,y,z) function wrapper (replaces coordinates)
+0x80402E50: Camera Patch Level Table
+0x80402EC0: Act Selector Hack Level Table
+0x80402F00: Act Selector Hack
+0x80402F50: Camera Patch
+0x80403000: Water Pointers Hack
+0x80403500: Water Hack types
+0x80404F00 - 0x08405000: Star Positions
+0x80405000 - 0x8040F000: Trajectories
+0x80420000: Start of Bank 0x0E
+0x80520000: Start of Bank 0x07
+0x80570000: Start of Music memory pool (if enabled)
+0x80620000: Start of Bank 0x06
+0x80670000: Hacked collision triangles
+0x80700000: Start of Bank 0x05
+0x80750000: More hacked collision triangles
+0x807B0000: Start of Bank 0x13
+0x807C0000: Start of Bank 0x0A

@@ -1,0 +1,31 @@
+.ORG 0x80286AD8    ; ROM  0x41AD8
+ 
+JAL PatchCamera
+LW A0, 0x0040 (SP)     ; camera pointer from stack
+
+.ORG 0x80402F50
+PatchCamera:
+
+ADDIU SP, SP, 0xFFE8
+SW RA, 0x0014 (SP)
+
+LUI AT, 0x8033
+LH AT, 0xDDF8 (AT)     ; current level
+LUI T0, 0x8040
+ORI T0, T0, 0x2E50     ; table
+ADDU T0, T0, AT
+LBU T0, 0x0000 (T0)    ; t0 = *(table+level);
+
+ADDIU AT, R0, 0x0001
+BEQ T0, AT, DoCamera   ; if (t0 == 1) goto DoCamera;
+ADDIU R0, R0, 0x0000
+
+JR RA                  ; else return;
+ADDIU SP, SP, 0x0018
+
+DoCamera:
+JAL 0x8028EEB0        ; void CameraStuff (*Camera)
+NOP                   ; A0 is already loaded
+LW RA, 0x0014 (SP)    ; load RA from stack since the previous JAL messed with this register
+JR RA
+ADDIU SP, SP, 0x0018

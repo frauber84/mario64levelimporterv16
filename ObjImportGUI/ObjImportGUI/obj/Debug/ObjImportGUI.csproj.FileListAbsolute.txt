@@ -1,0 +1,30 @@
+C:\Documents and Settings\user\Configurações locais\Dados de aplicativos\Temporary Projects\ObjImportGUI\bin\Debug\ObjImportGUI.exe
+C:\Documents and Settings\user\Configurações locais\Dados de aplicativos\Temporary Projects\ObjImportGUI\bin\Debug\ObjImportGUI.pdb
+C:\Documents and Settings\user\Configurações locais\Dados de aplicativos\Temporary Projects\ObjImportGUI\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\user\Configurações locais\Dados de aplicativos\Temporary Projects\ObjImportGUI\obj\Debug\ObjImportGUI.Form1.resources
+C:\Documents and Settings\user\Configurações locais\Dados de aplicativos\Temporary Projects\ObjImportGUI\obj\Debug\ObjImportGUI.Properties.Resources.resources
+C:\Documents and Settings\user\Configurações locais\Dados de aplicativos\Temporary Projects\ObjImportGUI\obj\Debug\ObjImportGUI.csproj.GenerateResource.Cache
+C:\Documents and Settings\user\Configurações locais\Dados de aplicativos\Temporary Projects\ObjImportGUI\obj\Debug\ObjImportGUI.exe
+C:\Documents and Settings\user\Configurações locais\Dados de aplicativos\Temporary Projects\ObjImportGUI\obj\Debug\ObjImportGUI.pdb
+C:\Documents and Settings\user\Meus documentos\Visual Studio 2008\Projects\ObjImportGUI\ObjImportGUI\obj\Debug\ObjImportGUI.exe
+C:\Documents and Settings\user\Meus documentos\Visual Studio 2008\Projects\ObjImportGUI\ObjImportGUI\obj\Debug\ObjImportGUI.pdb
+C:\Documents and Settings\user\Meus documentos\Visual Studio 2008\Projects\ObjImportGUI\ObjImportGUI\bin\Debug\ObjImportGUI.exe
+C:\Documents and Settings\user\Meus documentos\Visual Studio 2008\Projects\ObjImportGUI\ObjImportGUI\bin\Debug\ObjImportGUI.pdb
+C:\Documents and Settings\user\Meus documentos\Visual Studio 2008\Projects\ObjImportGUI\ObjImportGUI\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\user\Meus documentos\Visual Studio 2008\Projects\ObjImportGUI\ObjImportGUI\obj\Debug\ObjImportGUI.Properties.Resources.resources
+C:\Documents and Settings\user\Meus documentos\Visual Studio 2008\Projects\ObjImportGUI\ObjImportGUI\obj\Debug\ObjImportGUI.csproj.GenerateResource.Cache
+C:\Documents and Settings\user\Meus documentos\Visual Studio 2008\Projects\ObjImportGUI\ObjImportGUI\bin\Debug\ObjImportGUI.exe.config
+C:\Documents and Settings\user\Meus documentos\Visual Studio 2008\Projects\ObjImportGUI\ObjImportGUI\obj\Debug\ObjImportGUI.Form2.resources
+C:\Documents and Settings\user\Meus documentos\Visual Studio 2008\Projects\ObjImportGUI\ObjImportGUI\obj\Debug\ObjImportGUI.CustomBackground.resources
+C:\Users\Fernando\Documents\Visual Studio 2008\Projects\ObjImportGUI\ObjImportGUI\bin\Debug\ObjImportGUI.exe.config
+C:\Users\Fernando\Documents\Visual Studio 2008\Projects\ObjImportGUI\ObjImportGUI\bin\Debug\ObjImportGUI.exe
+C:\Users\Fernando\Documents\Visual Studio 2008\Projects\ObjImportGUI\ObjImportGUI\bin\Debug\ObjImportGUI.pdb
+C:\Users\Fernando\Documents\Visual Studio 2008\Projects\ObjImportGUI\ObjImportGUI\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Fernando\Documents\Visual Studio 2008\Projects\ObjImportGUI\ObjImportGUI\obj\Debug\ObjImportGUI.Form2.resources
+C:\Users\Fernando\Documents\Visual Studio 2008\Projects\ObjImportGUI\ObjImportGUI\obj\Debug\ObjImportGUI.Properties.Resources.resources
+C:\Users\Fernando\Documents\Visual Studio 2008\Projects\ObjImportGUI\ObjImportGUI\obj\Debug\ObjImportGUI.csproj.GenerateResource.Cache
+C:\Users\Fernando\Documents\Visual Studio 2008\Projects\ObjImportGUI\ObjImportGUI\obj\Debug\ObjImportGUI.exe
+C:\Users\Fernando\Documents\Visual Studio 2008\Projects\ObjImportGUI\ObjImportGUI\obj\Debug\ObjImportGUI.pdb
+C:\Users\Fernando\Documents\Visual Studio 2008\Projects\ObjImportGUI\ObjImportGUI\obj\Debug\ObjImportGUI.MainForm.resources
+C:\Users\Fernando\Documents\Visual Studio 2008\Projects\ObjImportGUI\ObjImportGUI\obj\Debug\ObjImportGUI.SequenceForm.resources
+C:\Users\Fernando\Documents\Visual Studio 2008\Projects\ObjImportGUI\ObjImportGUI\obj\Debug\ObjImportGUI.Text.resources

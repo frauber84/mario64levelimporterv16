@@ -1,0 +1,5 @@
+[Environment]
+Convert path = C:\Users\Fernando\Documents\Visual Studio 2008\Projects\ObjImportGUI\ObjImportGUI\bin\Debug\cvt.exe  
+obj_import.exe version = v16
+Restoring Level = 29
+ROM Position = 0x2ac2d8

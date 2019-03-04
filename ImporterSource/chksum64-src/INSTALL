@@ -1,0 +1,29 @@
+
+
+                      chksum64 V1.2 - 16/July/1997
+
+
+COPYRIGHT AND LICENSING RESTRICTIONS
+====================================
+
+Copyright (C) 1997 Andreas Sterbenz (stan@sbox.tu-graz.ac.at)
+This program is released under the terms of the GNU public license, read
+the file COPYING that came with this archive.
+
+
+COMPILING
+=========
+
+If you are on a Unix system and have gcc in your path, just hit 'make' and
+you should be done. Otherwise you are forced to figure it out yourself. 
+
+NOTE: If you get a bunch of weird error messages, make sure that the
+Makefile and the source file are in Unix text format and do not have DOS
+carriage returns at the end of each line.
+
+AUTHORS CONTACT ADDRESS
+=======================
+
+Send comments or whatever to stan@sbox.tu-graz.ac.at . Flames will be
+silently ignored.
+

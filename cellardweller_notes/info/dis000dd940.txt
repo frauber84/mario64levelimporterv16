@@ -1,0 +1,245 @@
+Super Mario 64 (English).swab.v64
+00322940: 27 bd ff e0  ADDIU sp, sp, 0xffe0
+00322944: 3c 0e 80 36  LUI t6, 0x8036(HI:sptask_bss_0000)
+00322948: af bf 00 14  SW ra, sp, 0x14
+0032294c: af a4 00 20  SW a0, sp, 0x20
+00322950: 25 ce 4c 20  ADDIU t6, t6, 0x4c20(LO:sptask_bss_0000)
+00322954: af ae 00 1c  SW t6, sp, 0x1c
+
+00322958: 01 c0 28 25  OR a1, t6, r0
+0032295c: 8f a4 00 20  LW a0, sp, 0x20
+00322960: 0c 0c 92 44  JAL bcopy               bcopy([sp + 0x20], sptask_bss_0000, 0x40)
+00322964: 24 06 00 40  ADDIU a2, r0, 0x40
+
+00322968: 8f af 00 1c  LW t7, sp, 0x1c         ;t7 = [sp + 0x1c]
+0032296c: 8d f8 00 10  LW t8, t7, 0x10         ;t8 = *([sp+0x1c]+0x10);
+00322970: 13 00 00 05  BEQ r0, t8, 0x5         if (*([sp+0x1c]+0x10) == 0) goto 0x80322988;
+00322974: 00 00 00 00  NOP
+00322978: 0c 0c 9f ac  JAL osVertualToPhysical ;*([sp+0x1c]+0x10) = osVertualToPhysical(*([sp+0x1c]+0x10));
+0032297c: 03 00 20 25  OR a0, t8, r0
+00322980: 8f b9 00 1c  LW t9, sp, 0x1c
+00322984: af 22 00 10  SW v0, t9, 0x10
+
+00322988: 8f a8 00 1c  LW t0, sp, 0x1c
+0032298c: 8d 09 00 18  LW t1, t0, 0x18
+00322990: 11 20 00 05  BEQ r0, t1, 0x5
+00322994: 00 00 00 00  NOP
+00322998: 0c 0c 9f ac  JAL osVertualToPhysical *([sp+0x1c]+0x18) = osVertualToPhysical(*([sp+0x1c]+0x18));
+0032299c: 01 20 20 25  OR a0, t1, r0
+003229a0: 8f aa 00 1c  LW t2, sp, 0x1c
+003229a4: ad 42 00 18  SW v0, t2, 0x18
+
+003229a8: 8f ab 00 1c  LW t3, sp, 0x1c
+003229ac: 8d 6c 00 20  LW t4, t3, 0x20
+003229b0: 11 80 00 05  BEQ r0, t4, 0x5
+003229b4: 00 00 00 00  NOP
+003229b8: 0c 0c 9f ac  JAL osVertualToPhysical ;*([sp+0x1c]+0x20) = osVertualToPhysical(*([sp+0x1c]+0x20));
+003229bc: 01 80 20 25  OR a0, t4, r0
+003229c0: 8f ad 00 1c  LW t5, sp, 0x1c
+003229c4: ad a2 00 20  SW v0, t5, 0x20
+
+003229c8: 8f ae 00 1c  LW t6, sp, 0x1c
+003229cc: 8d cf 00 28  LW t7, t6, 0x28
+003229d0: 11 e0 00 05  BEQ r0, t7, 0x5
+003229d4: 00 00 00 00  NOP
+003229d8: 0c 0c 9f ac  JAL osVertualToPhysical ;*([sp+0x1c]+0x28) = osVertualToPhysical(*([sp+0x1c]+0x28));
+003229dc: 01 e0 20 25  OR a0, t7, r0
+003229e0: 8f b8 00 1c  LW t8, sp, 0x1c
+003229e4: af 02 00 28  SW v0, t8, 0x28
+
+003229e8: 8f b9 00 1c  LW t9, sp, 0x1c
+003229ec: 8f 28 00 2c  LW t0, t9, 0x2c
+003229f0: 11 00 00 05  BEQ r0, t0, 0x5
+003229f4: 00 00 00 00  NOP
+003229f8: 0c 0c 9f ac  JAL osVertualToPhysical ;*([sp+0x1c]+0x2c) = osVertualToPhysical(*([sp+0x1c]+0x2c));
+003229fc: 01 00 20 25  OR a0, t0, r0
+00322a00: 8f a9 00 1c  LW t1, sp, 0x1c
+00322a04: ad 22 00 2c  SW v0, t1, 0x2c
+
+00322a08: 8f aa 00 1c  LW t2, sp, 0x1c
+00322a0c: 8d 4b 00 30  LW t3, t2, 0x30
+00322a10: 11 60 00 05  BEQ r0, t3, 0x5
+00322a14: 00 00 00 00  NOP
+00322a18: 0c 0c 9f ac  JAL osVertualToPhysical ;*([sp+0x1c]+0x30) = osVertualToPhysical(*([sp+0x1c]+0x30));
+00322a1c: 01 60 20 25  OR a0, t3, r0
+00322a20: 8f ac 00 1c  LW t4, sp, 0x1c
+00322a24: ad 82 00 30  SW v0, t4, 0x30
+
+00322a28: 8f ad 00 1c  LW t5, sp, 0x1c
+00322a2c: 8d ae 00 38  LW t6, t5, 0x38
+00322a30: 11 c0 00 05  BEQ r0, t6, 0x5
+00322a34: 00 00 00 00  NOP
+00322a38: 0c 0c 9f ac  JAL osVertualToPhysical ;*([sp+0x1c]+0x38) = osVertualToPhysical(*([sp+0x1c]+0x38));
+00322a3c: 01 c0 20 25  OR a0, t6, r0
+00322a40: 8f af 00 1c  LW t7, sp, 0x1c
+00322a44: ad e2 00 38  SW v0, t7, 0x38
+
+00322a48: 8f bf 00 14  LW ra, sp, 0x14
+00322a4c: 8f a2 00 1c  LW v0, sp, 0x1c         ;return [sp+0x1c]
+00322a50: 27 bd 00 20  ADDIU sp, sp, 0x20
+00322a54: 03 e0 00 08  JR ra
+00322a58: 00 00 00 00  NOP
+
+osSpTaskLoad:
+00322a5c: 27 bd ff e0  ADDIU sp, sp, 0xffe0
+00322a60: af bf 00 14  SW ra, sp, 0x14
+00322a64: af a4 00 20  SW a0, sp, 0x20
+00322a68: 0c 0c 8a 50  JAL 0x322940
+00322a6c: 8f a4 00 20  LW a0, sp, 0x20
+00322a70: af a2 00 1c  SW v0, sp, 0x1c
+
+00322a74: 8f ae 00 1c  LW t6, sp, 0x1c
+00322a78: 8d cf 00 04  LW t7, t6, 0x4
+00322a7c: 31 f8 00 01  ANDI t8, t7, 0x1
+00322a80: 13 00 00 0b  BEQ r0, t8, 0xb
+00322a84: 00 00 00 00  NOP
+00322a88: 8d d9 00 38  LW t9, t6, 0x38
+00322a8c: 24 01 ff fe  ADDIU at, r0, 0xfffe
+00322a90: ad d9 00 18  SW t9, t6, 0x18
+
+00322a94: 8f a8 00 1c  LW t0, sp, 0x1c
+00322a98: 8d 09 00 3c  LW t1, t0, 0x3c
+00322a9c: ad 09 00 1c  SW t1, t0, 0x1c
+
+00322aa0: 8f aa 00 20  LW t2, sp, 0x20
+00322aa4: 8d 4b 00 04  LW t3, t2, 0x4
+00322aa8: 01 61 60 24  AND t4, t3, at
+00322aac: ad 4c 00 04  SW t4, t2, 0x4
+
+00322ab0: 8f a4 00 1c  LW a0, sp, 0x1c
+00322ab4: 0c 0c 97 48  JAL osWritebackDCache
+00322ab8: 24 05 00 40  ADDIU a1, r0, 0x40
+00322abc: 0c 0c 9f cc  JAL __osSpSetStatus
+00322ac0: 24 04 2b 00  ADDIU a0, r0, 0x2b00
+
+00322ac4: 3c 04 04 00  LUI a0, 0x400
+00322ac8: 0c 0c 9f d0  JAL __osSpSetPc
+00322acc: 34 84 10 00  ORI a0, a0, 0x1000
+00322ad0: 24 01 ff ff  ADDIU at, r0, 0xffff
+00322ad4: 14 41 00 07  BNE v0, at, 0x7
+00322ad8: 00 00 00 00  NOP
+
+00322adc: 3c 04 04 00  LUI a0, 0x400
+00322ae0: 0c 0c 9f d0  JAL __osSpSetPc
+00322ae4: 34 84 10 00  ORI a0, a0, 0x1000
+00322ae8: 24 01 ff ff  ADDIU at, r0, 0xffff
+00322aec: 10 41 ff fb  BEQ at, v0, 0xfffb
+00322af0: 00 00 00 00  NOP
+
+00322af4: 3c 05 04 00  LUI a1, 0x400
+00322af8: 34 a5 0f c0  ORI a1, a1, 0xfc0
+00322afc: 24 04 00 01  ADDIU a0, r0, 0x1
+00322b00: 8f a6 00 1c  LW a2, sp, 0x1c
+00322b04: 0c 0c 9f e0  JAL __osSpRawStartDma
+00322b08: 24 07 00 40  ADDIU a3, r0, 0x40
+00322b0c: 24 01 ff ff  ADDIU at, r0, 0xffff
+00322b10: 14 41 00 0a  BNE v0, at, 0xa
+
+00322b14: 00 00 00 00  NOP
+00322b18: 3c 05 04 00  LUI a1, 0x400
+00322b1c: 34 a5 0f c0  ORI a1, a1, 0xfc0
+00322b20: 24 04 00 01  ADDIU a0, r0, 0x1
+00322b24: 8f a6 00 1c  LW a2, sp, 0x1c
+00322b28: 0c 0c 9f e0  JAL __osSpRawStartDma
+00322b2c: 24 07 00 40  ADDIU a3, r0, 0x40
+00322b30: 24 01 ff ff  ADDIU at, r0, 0xffff
+00322b34: 10 41 ff f8  BEQ at, v0, 0xfff8
+00322b38: 00 00 00 00  NOP
+
+00322b3c: 0c 0c a0 04  JAL __osSpDeviceBusy
+00322b40: 00 00 00 00  NOP
+00322b44: 10 40 00 05  BEQ r0, v0, 0x5
+00322b48: 00 00 00 00  NOP
+00322b4c: 0c 0c a0 04  JAL __osSpDeviceBusy
+00322b50: 00 00 00 00  NOP
+00322b54: 14 40 ff fd  BNE v0, r0, 0xfffd
+00322b58: 00 00 00 00  NOP
+
+00322b5c: 8f ad 00 1c  LW t5, sp, 0x1c
+00322b60: 3c 05 04 00  LUI a1, 0x400
+00322b64: 34 a5 10 00  ORI a1, a1, 0x1000
+00322b68: 24 04 00 01  ADDIU a0, r0, 0x1
+00322b6c: 8d a6 00 08  LW a2, t5, 0x8
+00322b70: 0c 0c 9f e0  JAL __osSpRawStartDma
+00322b74: 8d a7 00 0c  LW a3, t5, 0xc
+00322b78: 24 01 ff ff  ADDIU at, r0, 0xffff
+00322b7c: 14 41 00 0b  BNE v0, at, 0xb
+00322b80: 00 00 00 00  NOP
+
+00322b84: 8f af 00 1c  LW t7, sp, 0x1c
+00322b88: 3c 05 04 00  LUI a1, 0x400
+00322b8c: 34 a5 10 00  ORI a1, a1, 0x1000
+00322b90: 24 04 00 01  ADDIU a0, r0, 0x1
+00322b94: 8d e6 00 08  LW a2, t7, 0x8
+00322b98: 0c 0c 9f e0  JAL __osSpRawStartDma
+00322b9c: 8d e7 00 0c  LW a3, t7, 0xc
+00322ba0: 24 01 ff ff  ADDIU at, r0, 0xffff
+00322ba4: 10 41 ff f7  BEQ at, v0, 0xfff7
+00322ba8: 00 00 00 00  NOP
+
+00322bac: 8f bf 00 14  LW ra, sp, 0x14
+00322bb0: 27 bd 00 20  ADDIU sp, sp, 0x20
+00322bb4: 03 e0 00 08  JR ra
+00322bb8: 00 00 00 00  NOP
+
+osSpTaskStartGo:
+00322bbc: 27 bd ff e8  ADDIU sp, sp, 0xffe8
+00322bc0: af bf 00 14  SW ra, sp, 0x14
+00322bc4: 0c 0c a0 04  JAL __osSpDeviceBusy
+00322bc8: af a4 00 18  SW a0, sp, 0x18
+00322bcc: 10 40 00 05  BEQ r0, v0, 0x5
+00322bd0: 00 00 00 00  NOP
+
+00322bd4: 0c 0c a0 04  JAL __osSpDeviceBusy
+00322bd8: 00 00 00 00  NOP
+00322bdc: 14 40 ff fd  BNE v0, r0, 0xfffd
+00322be0: 00 00 00 00  NOP
+
+00322be4: 0c 0c 9f cc  JAL __osSpSetStatus
+00322be8: 24 04 01 25  ADDIU a0, r0, 0x125
+00322bec: 8f bf 00 14  LW ra, sp, 0x14
+00322bf0: 27 bd 00 18  ADDIU sp, sp, 0x18
+00322bf4: 03 e0 00 08  JR ra
+00322bf8: 00 00 00 00  NOP
+00322bfc: 00 00 00 00  NOP
+
+
+
+OSTask master_ostask;
+/* 0x80322940 */
+static OSTask * copy_and_xlate_ostask(OSTask *task)
+{
+    OSTask *pmaster = &master_ostask;
+
+    bcopy(pmaster, task, sizeof(OSTask));
+
+    if (pmaster->ucode) {
+        pmaster->ucode = osVertualToPhysical(pmaster->ucode);
+    }
+
+    if (pmaster->ucode_data) {
+        pmaster->ucode_data = osVertualToPhysical(pmaster->ucode_data);
+    }
+
+    if (pmaster->dram_stack) {
+        pmaster->dram_stack = osVertualToPhysical(pmaster->dram_stack);
+    }
+
+    if (pmaster->output_buff) {
+        pmaster->output_buff = osVertualToPhysical(pmaster->output_buff);
+    }
+
+    if (pmaster->output_buff_size) {
+        pmaster->output_buff_size = osVertualToPhysical(pmaster->output_buff_size);
+    }
+
+    if (pmaster->data_ptr) {
+        pmaster->data_ptr = osVertualToPhysical(pmaster->data_ptr);
+    }
+
+    if (pmaster->yeld_data_ptr) {
+        pmaster->yeld_data_ptr = osVertualToPhysical(pmaster->yeld_data_ptr);
+    }
+
+    return pmaster;
+}

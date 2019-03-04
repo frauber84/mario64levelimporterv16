@@ -1,0 +1,32 @@
+.ORG 0x8024BF38
+SLTI AT, T8, 0x0001
+
+
+.ORG 0x8024bf50    ; hook
+J Patch                     
+ADDIU R0, R0, 0x0000
+
+; Enable act selectors based on a table
+
+.ORG 0x80402f00
+Patch:
+
+LUI AT, 0x8033
+LH AT, 0xDDF8 (AT)  ; level
+
+LUI T0, 0x8040
+ORI T0, T0, 0x2ec0  ; act selector table
+ADDU T0, T0, AT
+
+LBU T0, 0x0000 (T0)
+
+ADDIU AT, R0, 0x0001     ; has act selector
+BEQ T0, AT, HasSelector
+ADDIU R0, R0, 0x0000
+
+J  0x8024BF90    ; skip selector
+OR V0, R0, R0
+
+HasSelector:
+J 0x8024BF58
+ADDIU R0, R0, 0x0000

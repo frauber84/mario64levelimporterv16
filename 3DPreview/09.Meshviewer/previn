@@ -1,0 +1,4 @@
+<?xml version="1.0"?><config><startUpModel file="D:\Dev-Cpp\7BC388\7BC388.obj" /><messageText caption="Mario 64 Level Importer - 3D Preview (Irrlicht Engine)"></messageText><scaling value = "2500"></scaling><rotation yvalue = "76"></rotation>
+<offset xvalue="100" yvalue="200" zvalue="500"></offset>
+<opengl>34</opengl>
+</config>

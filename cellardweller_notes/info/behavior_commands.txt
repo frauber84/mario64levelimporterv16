@@ -1,0 +1,252 @@
+00
+
+01
+
+02
+
+03
+
+04 xx xx xx [xx xx xx xx]
+Jumps to another address.
+[4,7] segmented address to jump to
+
+05
+
+06
+
+07
+
+08 xx xx xx
+Saves the current interpeter pointer to the stack.
+
+09 xx xx xx
+Yield and jump to the address on the stack.
+
+0a
+
+0b
+
+0c xx xx xx [xx xx xx xx]
+Calls a function.
+[4,7] address of functon
+
+0d
+
+0e [xx] [xx xx]
+Generic set float.
+Takes a 16 bit signed int, expands it to a float, and saves it into the object
+structure.
+[1  ] unsigned index to write to (offset = 0x88 + 4*index) (see list of used values)
+[2,3] value
+
+      index   offset  desc
+      0x00 => 0x088
+      0x06 => 0x0a0  x
+      0x07 => 0x0a4  y
+      0x08 => 0x0a8  z
+      0x0a => 0x0b0
+      0x0c => 0x0b8
+      0x12 => 0x0d0  x rotation -- (Note: target is an int, so use only with zero)
+      0x13 => 0x0d4  y rotation -- (Note: target is an int, so use only with zero)
+      0x14 => 0x0d8  z rotation -- (Note: target is an int, so use only with zero)
+      0x15 => 0x0dc
+      0x1b => 0x0f4
+      0x1d => 0x0fc
+      0x22 => 0x110
+      0x2c => 0x138
+      0x2d => 0x13c
+      0x2e => 0x140
+      0x3d => 0x17c
+      0x43 => 0x194
+      0x45 => 0x19c  disappear distance
+
+0f [xx] [xx xx]
+Increment object field
+Takes a 16 bit signed int, and adds it at the specified index in the object structure.
+[1  ] unsigned index to write to (offset = 0x88 + 4*index) (see list of used values)
+[2,3] value
+      0x00 => 0x088
+      0x10 => 0x0c8  y rotation
+      0x12 => 0x0d0  x rotation
+      0x13 => 0x0d4  y rotation
+      0x14 => 0x0d8  z rotation
+      0x1a => 0x0f0
+
+
+
+10 [xx] [xx xx]
+Generic set 32 bit int.
+Takes a 16 bit signed int, expands it to 32 bits, and saves it into the object
+structure.
+[1  ] unsigned index to write to (offset = 0x88 + 4*index) (see list of used values)
+[2,3] value
+
+      index   offset  desc
+      0x00 => 0x088
+      0x05 => 0x09c
+      0x12 => 0x0d0  x rotation
+      0x13 => 0x0d4  y rotation
+      0x14 => 0x0d8  z rotation
+      0x19 => 0x0ec
+      0x1a => 0x0f0
+      0x1b => 0x0f4
+      0x1d => 0x0fc
+      0x24 => 0x118
+      0x25 => 0x11c
+      0x2a => 0x130
+      0x2b => 0x134
+      0x2f => 0x144
+      0x3d => 0x17c
+      0x3e => 0x180
+      0x3f => 0x184
+      0x42 => 0x190
+      0x44 => 0x198
+      0x46 => 0x1a0
+      0x49 => 0x1ac
+
+
+
+11 [xx] [xx xx]
+Set flags
+Takes a 16 bit int, and ORs it to the lower 16 bits of a 32 bit word in the
+object structure.
+[1  ] unsigned index to write to (offset = 0x88 + 4*index) (see list of used values)
+[2,3] value
+
+      index   offset  desc
+      0x00 => 0x088
+      0x01 => 0x08c
+      0x03 => 0x094
+      
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+1a
+
+1b
+
+1c 
+
+1d
+
+1e xx xx xx
+Repositions object vertically depending on terrain
+I guess that it places the object on the ground.
+
+1f
+
+20
+
+21 xx xx xx
+Sets a flag in the object's structure at offset 0x002
+
+22
+
+23
+
+24
+
+25
+
+26
+
+27 [xx] xx xx [xx xx xx xx]
+Set a value in the objects data structure (used to set inital pose)
+This can be used like command 0x0e if the 16 bit int is pre-converted to a float.
+[1  ] index (offset = 0x88 + 4*index) (inital pose uses 0x26)
+[4,7] value
+
+28
+
+29
+
+2a xx xx xx [xx xx xx xx]
+(Set collision data)
+[4,7] segmented address (common segments used: 0x07 0x08 0x05 0x03)
+
+2b
+
+2c 
+
+2d xx xx xx
+Copies the object position to another part of the object structure
+
+2e
+
+2f
+
+30 xx xx xx [xx xx] [xx xx] [xx xx] [xx xx] [xx xx] [xx xx] [xx xx] [xx xx]
+[16,17] read but unused
+[18,19] read but unused
+
+31
+
+32
+
+33 [xx] xx xx [xx xx xx xx]
+Clears bits in an object's data structure
+Might affect a different object from the current one
+[1  ] unsigned index to write to (offset = 0x88 + 4*index)
+[4,7] value
+
+
+0x0c -- 751  *
+0x00 -- 543
+0x11 -- 466  *
+0x09 -- 426  *
+0x08 -- 426  *
+0x10 -- 256  *
+0x2d -- 151  *
+0x0e -- 132  *
+0x2a -- 108  *
+0x21 -- 101  *
+0x27 -- 71   *
+0x30 -- 68   .
+0x0f -- 56   *
+0x23 -- 54   *
+0x1e -- 51   *
+0x28 -- 48   
+0x1d -- 46
+0x0a -- 43
+0x05 -- 36
+0x06 -- 34
+0x2f -- 33
+0x32 -- 32
+0x01 -- 27
+0x35 -- 22
+0x04 -- 20
+0x2b -- 20
+0x0d -- 17
+0x1c -- 14
+0x14 -- 12
+0x33 -- 12   *
+0x1f -- 11
+0x34 -- 10
+0x22 -- 8
+0x02 -- 6
+0x2c -- 5
+0x16 -- 5
+0x2e -- 4
+0x1b -- 3
+0x03 -- 3
+0x07 -- 2
+0x37 -- 2
+0x80 -- 2
+0x29 -- 2
+0x13 -- 2
+0x15 -- 1
+0x25 -- 1
